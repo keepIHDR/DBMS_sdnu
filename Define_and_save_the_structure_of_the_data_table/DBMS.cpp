@@ -23,8 +23,8 @@ void createDataBase() {
 	ofstream ofs;
 	string fileName = dataPath + DBMS_name + ".txt";
 	ifstream ifs(fileName.c_str());
-	if (ifs.good()) {
-		ofs.open(dataPath + DBMS_name + ".txt", ios::in);
+	if (!ifs.good()) {
+		ofs.open(fileName);
 		ofs.close();
 		cout << "创建成功! " << endl;
 	}
@@ -43,7 +43,7 @@ void useDataBase() {
 	ofstream ofs;
 	string fileName = dataPath + DBMS_name + ".txt";
 	ifstream ifs(fileName.c_str());
-	if (!ifs.good()) {
+	if (ifs.good()) {
 		ofs.open(dataPath + DBMS_name + ".txt", ios::app);
 		cout << "打开数据库成功! " << endl;
 		system("pause");
@@ -56,12 +56,14 @@ void useDataBase() {
 			}
 			switch (option) {
 			case 1:	// 创建表
-				createTable();
+				ofs << createTable();
 				break;
 			case 2:	// 删除表
 				deleteTable();
 				break;
 			}
+			system("pause");
+			system("cls");
 		}
 		ofs.close();
 	}
