@@ -20,7 +20,7 @@ int main() {
 	while (1) {
 		showDataBaseList();
 		cin >> option;
-		if (option == 0) {
+		if (option == 0) {	// ÍË³ö³ÌÐò
 			return 0;
 		}
 		switch (option) {

@@ -2,14 +2,10 @@
 using namespace std;
 #include "table.h"
 
-table::table() {
+void createTable() {
 
 }
 
-table::table(string name) {
-
-}
-
-table::~table() {
+void deleteTable() {
 
 }

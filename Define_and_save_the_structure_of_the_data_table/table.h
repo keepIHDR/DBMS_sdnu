@@ -14,3 +14,6 @@ public:
 private:
 
 };
+
+void createTable();
+void deleteTable();
