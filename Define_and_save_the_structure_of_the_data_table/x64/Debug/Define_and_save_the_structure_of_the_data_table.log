@@ -1,5 +1,3 @@
-﻿  DBMS.cpp
-D:\Development\DBSM\DBMS_sdnu\Define_and_save_the_structure_of_the_data_table\DBMS.h(1,1): warning C4828: 文件包含在偏移 0xf6 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
-  table.cpp
-  正在生成代码...
+﻿  table.cpp
+D:\Development\DBSM\DBMS_sdnu\Define_and_save_the_structure_of_the_data_table\table.cpp(22,7): warning C4101: “count”: 未引用的局部变量
   Define_and_save_the_structure_of_the_data_table.vcxproj -> D:\Development\DBSM\DBMS_sdnu\Define_and_save_the_structure_of_the_data_table\x64\Debug\Define_and_save_the_structure_of_the_data_table.exe

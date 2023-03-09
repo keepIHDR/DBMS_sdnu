@@ -1,9 +1,9 @@
 #include "DBMS.h"
 #include "table.h"
 
-string dataPath = "D:\\Development\\DBSM\\DBMS_sdnu\\Define_and_save_the_structure_of_the_data_table\\data\\";
-string folderPath = "D:\\Development\\DBSM\\DBMS_sdnu\\Define_and_save_the_structure_of_the_data_table\\data\\";
-string path = "D:\\Development\\DBSM\\DBMS_sdnu\\Define_and_save_the_structure_of_the_data_table\\";
+string databasePath = "D:\\Development\\DBSM\\DBMS_sdnu\\Define_and_save_the_structure_of_the_data_table\\data\\database\\";
+//string folderPath = "D:\\Development\\DBSM\\DBMS_sdnu\\Define_and_save_the_structure_of_the_data_table\\data\\";
+//string path = "D:\\Development\\DBSM\\DBMS_sdnu\\Define_and_save_the_structure_of_the_data_table\\";
 
 void showTableList() {
 	cout << "--------------------------------" << endl;
@@ -21,7 +21,7 @@ void createDataBase() {
 	cout << "请输入要创建的数据库的名称: ";
 	cin >> DBMS_name;
 	ofstream ofs;
-	string fileName = dataPath + DBMS_name + ".txt";
+	string fileName = databasePath + DBMS_name + ".txt";
 	ifstream ifs(fileName.c_str());
 	if (!ifs.good()) {
 		ofs.open(fileName);
@@ -41,10 +41,10 @@ void useDataBase() {
 	cin >> DBMS_name;
 	int option;
 	ofstream ofs;
-	string fileName = dataPath + DBMS_name + ".txt";
+	string fileName = databasePath + DBMS_name + ".txt";
 	ifstream ifs(fileName.c_str());
 	if (ifs.good()) {
-		ofs.open(dataPath + DBMS_name + ".txt", ios::app);
+		ofs.open(databasePath + DBMS_name + ".txt", ios::app);
 		cout << "打开数据库成功! " << endl;
 		system("pause");
 		system("cls");
@@ -77,7 +77,7 @@ void deleteDataBase() {
 	string DBMS_name;
 	cout << "请输入要删除的数据库的名称: ";
 	cin >> DBMS_name;
-	string tempPath = dataPath + DBMS_name + ".txt";
+	string tempPath = databasePath + DBMS_name + ".txt";
 	if (!(remove(tempPath.c_str()))) {
 		cout << "数据库删除成功!" << endl;
 	}
